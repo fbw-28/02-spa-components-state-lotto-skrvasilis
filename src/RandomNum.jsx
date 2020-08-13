@@ -5,8 +5,8 @@ export default class RandomNum extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numbers: [2, 8, 10, 12, 4, 5],
-      number7: 9,
+      numbers: new Array(6),
+      number7: '',
       visibility: "none",
     };
   }
@@ -46,11 +46,12 @@ export default class RandomNum extends Component {
              <p>{item}</p>
            )
          })}
-         <p>{this.state.number7}</p>
+         <p className='number7'>{this.state.number7}</p>
         </div>
         <div className="buttons">
           <button onClick={this.changeDisplay}>reset</button>
           <button onClick={this.numbers49}>Show me lucky numbers</button>
+
         </div>
       </div>
     );
